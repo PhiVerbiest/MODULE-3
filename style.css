@@ -10,10 +10,10 @@
   margin: 0;
 }
 :root{
-  --pink: #ff74a4;
-  --violet: #9f6ea3;
-  --lightblack: #515C6F;
-  --white: #ffffff;
+  --pink: #232425;
+  --violet: #262929;
+  --lightblack: #f7f9f9;
+  --white: #1d1e1f;
   --darkwhite: #cecaca;
   --pinkshadow: #ffcbdd;
   --lightbshadow: rgba(0,0,0,0.15);
