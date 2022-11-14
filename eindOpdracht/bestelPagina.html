@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bedankt.css">
+    <title>Verzenden</title>
+</head>
+<body>
+    
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Multi Step Bootstrap Form with animations</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+<!--PEN HEADER-->
+<!-- <header class="header">
+  <h1 class="header__title">Multi Steps Form with animations</h1>
+  <div class="header__btns btns"><a class="header__btn btn" href="https://github.com/nat-davydova/multisteps-form" title="Check on Github" target="_blank">Check on Github</a></div>
+</header>
+PEN CONTENT    
+<div class="content">
+  content inner-->
+  <!-- <div class="content__inner"> -->
+    <!-- <div class="container"> -->
+      <!--content title-->
+      <!-- <h2 class="content__title content__title--m-sm">Pick animation type</h2> -->
+      <!--animations form-->
+      <!-- <form class="pick-animation my-4">
+        <div class="form-row">
+          <div class="col-5 m-auto">
+            <select class="pick-animation__select form-control">
+              <option value="scaleIn">ScaleIn</option>
+              <option value="scaleOut">ScaleOut</option>
+              <option value="slideHorz" selected="selected">SlideHorz</option>
+              <option value="slideVert">SlideVert</option>
+              <option value="fadeIn">FadeIn</option>
+            </select>
+          </div>
+        </div>
+      </form> -->
+      <!--content title-->
+      <!-- <h2 class="content__title">Click on steps or 'Prev' and 'Next' buttons</h2> -->
+    </div>
+    <div class="container overflow-hidden">
+      <!--multisteps-form-->
+      <div class="multisteps-form">
+        <!--progress bar-->
+        <div class="row">
+          <div class="col-12 col-lg-8 ml-auto mr-auto mb-4">
+            <div class="multisteps-form__progress">
+              <button class="multisteps-form__progress-btn js-active" type="button" title="User Info">User Info</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Address">Address</button>
+              <button class="multisteps-form__progress-btn" type="button" title="Order Info">Checkout</button>
+              <!-- <button class="multisteps-form__progress-btn" type="button" title="Comments">Comments</button> -->
+            </div>
+          </div>
+        </div>
+        <!--form panels-->
+        <div class="row">
+          <div class="col-12 col-lg-8 m-auto">
+            <form class="multisteps-form__form" action="bedankt.php" method="post">
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white js-active" data-animation="slideHorz">
+                <h3 class="multisteps-form__title">Your User Info</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" name="firstname" type="text" placeholder="First Name"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" name="lastname" type="text" placeholder="Last Name"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" name="login" type="text" placeholder="Login"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" name="email" type="email" placeholder="Email"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" name="password" type="password" placeholder="Password"/>
+                    </div>
+                    <div class="col-12 col-sm-6 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" name="repeatPassword" type="password" placeholder="Repeat Password"/>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!--single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h3 class="multisteps-form__title">Your Address</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <input class="multisteps-form__input form-control" name="adress_1" type="text" placeholder="Address 1"/>
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col">
+                      <input class="multisteps-form__input form-control" name="adress_2" type="text" placeholder="Address 2"/>
+                     
+                    </div>
+                  </div>
+                  <div class="form-row mt-4">
+                    <div class="col-12 col-sm-6">
+                      <input class="multisteps-form__input form-control" name="city" type="text" placeholder="City"/>
+                    </div>
+                    <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                      <select name="country" class="multisteps-form__select form-control">
+                        <option value="" disabled selected>Country</option>
+                        <option value="Netherlands">Netherlands</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Belgium">Belgium</option>
+                      </select>
+                    </div>
+                    <div class="col-6 col-sm-3 mt-4 mt-sm-0">
+                      <input class="multisteps-form__input form-control" name="zip" type="text" placeholder="Zip"/>
+                    </div>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-primary ml-auto js-btn-next" type="button" title="Next">Next</button>
+                  </div>
+                </div>
+              </div>
+              <!-- single form panel-->
+              <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+              <div class="price-container">
+        <div class="price-card">
+          <input name="price" id="monthly" type="radio" onclick="checkoutPayment('DHL')" required>
+          <div class="content">
+            UPS
+            <span>$7,95/Shipping</span>
+          </div>
+          <label for="monthly"></label>
+        </div>
+        
+        <div class="price-card">
+          <input name="price" type="radio" id="yearly" onclick="checkoutPayment('PostNL')" required>
+          <div class="content">
+            Fedex
+            <span>$4,95/Shipping</span>
+          </div>
+          <label for="yearly"></label>
+        </div>
+        
+      </div>
+      <div class="detail-info">
+        <div class="info">
+          <h3>Producten: <span id="product"></span> <span id="fee"></span></h3>
+          <small>Enter your credit card detail to complete subscription</small>
+        </div>
+        <div class="input-field">
+          <label for="card_number">Card number</label>
+          <input type="number" name="card_number" id="card_number" placeholder="32">
+        </div>
+        <div class="grid">
+          <div class="input-field">
+            <label for="expire_date">Expire date</label>
+            <input type="date" name="expire_date" id="expire_date" placeholder="23-Jan-2021">
+          </div>
+          <div class="input-field">
+            <label for="card_code">Card code</label>
+            <input type="number" name="card_code" id="card_code" placeholder="322">
+          </div>
+        </div>
+        
+        
+        <p>Here by you agree with terms of our products</p>
+              </div>
+              <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-success ml-auto" type="submit" title="Send" onclick="informatiePagina()">Send</button>
+                  </div>
+              <!--single form panel -->
+              <!-- <div class="multisteps-form__panel shadow p-4 rounded bg-white" data-animation="slideHorz">
+                <h3 class="multisteps-form__title">Additional Comments</h3>
+                <div class="multisteps-form__content">
+                  <div class="form-row mt-4">
+                    <textarea class="multisteps-form__textarea form-control" placeholder="Additional Comments and Requirements"></textarea>
+                  </div>
+                  <div class="button-row d-flex mt-4">
+                    <button class="btn btn-primary js-btn-prev" type="button" title="Prev">Prev</button>
+                    <button class="btn btn-success ml-auto" type="submit" title="Send">Send</button>
+                  </div>
+                </div>
+              </div> -->
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css'></script>
+<script>
+    //DOM elements
+const DOMstrings = {
+  stepsBtnClass: 'multisteps-form__progress-btn',
+  stepsBtns: document.querySelectorAll(`.multisteps-form__progress-btn`),
+  stepsBar: document.querySelector('.multisteps-form__progress'),
+  stepsForm: document.querySelector('.multisteps-form__form'),
+  stepsFormTextareas: document.querySelectorAll('.multisteps-form__textarea'),
+  stepFormPanelClass: 'multisteps-form__panel',
+  stepFormPanels: document.querySelectorAll('.multisteps-form__panel'),
+  stepPrevBtnClass: 'js-btn-prev',
+  stepNextBtnClass: 'js-btn-next' };
+
+
+//remove class from a set of items
+const removeClasses = (elemSet, className) => {
+
+  elemSet.forEach(elem => {
+
+    elem.classList.remove(className);
+
+  });
+
+};
+
+//return exect parent node of the element
+const findParent = (elem, parentClass) => {
+
+  let currentNode = elem;
+
+  while (!currentNode.classList.contains(parentClass)) {
+    currentNode = currentNode.parentNode;
+  }
+
+  return currentNode;
+
+};
+
+//get active button step number
+const getActiveStep = elem => {
+  return Array.from(DOMstrings.stepsBtns).indexOf(elem);
+};
+
+//set all steps before clicked (and clicked too) to active
+const setActiveStep = activeStepNum => {
+
+  //remove active state from all the state
+  removeClasses(DOMstrings.stepsBtns, 'js-active');
+
+  //set picked items to active
+  DOMstrings.stepsBtns.forEach((elem, index) => {
+
+    if (index <= activeStepNum) {
+      elem.classList.add('js-active');
+    }
+
+  });
+};
+
+//get active panel
+const getActivePanel = () => {
+
+  let activePanel;
+
+  DOMstrings.stepFormPanels.forEach(elem => {
+
+    if (elem.classList.contains('js-active')) {
+
+      activePanel = elem;
+
+    }
+
+  });
+
+  return activePanel;
+
+};
+
+//open active panel (and close unactive panels)
+const setActivePanel = activePanelNum => {
+
+  //remove active class from all the panels
+  removeClasses(DOMstrings.stepFormPanels, 'js-active');
+
+  //show active panel
+  DOMstrings.stepFormPanels.forEach((elem, index) => {
+    if (index === activePanelNum) {
+
+      elem.classList.add('js-active');
+
+      setFormHeight(elem);
+
+    }
+  });
+
+};
+
+//set form height equal to current panel height
+const formHeight = activePanel => {
+
+  const activePanelHeight = activePanel.offsetHeight;
+
+  DOMstrings.stepsForm.style.height = `${activePanelHeight}px`;
+
+};
+
+const setFormHeight = () => {
+  const activePanel = getActivePanel();
+
+  formHeight(activePanel);
+};
+
+//STEPS BAR CLICK FUNCTION
+DOMstrings.stepsBar.addEventListener('click', e => {
+
+  //check if click target is a step button
+  const eventTarget = e.target;
+
+  if (!eventTarget.classList.contains(`${DOMstrings.stepsBtnClass}`)) {
+    return;
+  }
+
+  //get active button step number
+  const activeStep = getActiveStep(eventTarget);
+
+  //set all steps before clicked (and clicked too) to active
+  setActiveStep(activeStep);
+
+  //open active panel
+  setActivePanel(activeStep);
+});
+
+//PREV/NEXT BTNS CLICK
+DOMstrings.stepsForm.addEventListener('click', e => {
+
+  const eventTarget = e.target;
+
+  //check if we clicked on `PREV` or NEXT` buttons
+  if (!(eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`) || eventTarget.classList.contains(`${DOMstrings.stepNextBtnClass}`)))
+  {
+    return;
+  }
+
+  //find active panel
+  const activePanel = findParent(eventTarget, `${DOMstrings.stepFormPanelClass}`);
+
+  let activePanelNum = Array.from(DOMstrings.stepFormPanels).indexOf(activePanel);
+
+  //set active step and active panel onclick
+  if (eventTarget.classList.contains(`${DOMstrings.stepPrevBtnClass}`)) {
+    activePanelNum--;
+
+  } else {
+
+    activePanelNum++;
+
+  }
+
+  setActiveStep(activePanelNum);
+  setActivePanel(activePanelNum);
+
+});
+
+//SETTING PROPER FORM HEIGHT ONLOAD
+window.addEventListener('load', setFormHeight, false);
+
+//SETTING PROPER FORM HEIGHT ONRESIZE
+window.addEventListener('resize', setFormHeight, false);
+
+//changing animation via animation select !!!YOU DON'T NEED THIS CODE (if you want to change animation type, just change form panels data-attr)
+
+const setAnimationType = newType => {
+  DOMstrings.stepFormPanels.forEach(elem => {
+    elem.dataset.animation = newType;
+  });
+};
+
+//selector onchange - changing animation
+const animationSelect = document.querySelector('.pick-animation__select');
+
+animationSelect.addEventListener('change', () => {
+  const newAnimationType = animationSelect.value;
+
+  setAnimationType(newAnimationType);
+});
+</script>
+<script >
+
+function checkoutPayment(type) {
+  let params = (new URL(document.location)).searchParams;
+  let params_2 = (new URL(document.location)).searchParams;
+  let prijs = params.get('prijs');
+  let product = params_2.get('product');
+  let fee;
+  
+  prijs = parseInt(prijs);
+
+  document.getElementById('fee').innerHTML = "$" + prijs;
+  document.getElementById('product').innerHTML = product;
+
+  // console.log(prijs);
+
+if(type === 'DHL') {
+fee = 7.95;
+}
+
+if(type === 'PostNL') {
+  fee = 4.95;
+}
+
+let totaal = prijs + fee;
+
+console.log(totaal);
+
+document.getElementById('fee').innerHTML = "$" + totaal;
+document.getElementById('product').innerHTML = product;
+}
+
+function informatiePagina(prijs, product) {
+  window.location.href='bedankt.php?prijs=' + prijs + '&product=' + product;
+
+  console.log(prijs, product);
+}
+</script>
+
+</body>
+</html>
+</body>
+</html>
